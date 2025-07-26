@@ -1,0 +1,53 @@
+.line {
+  height: 4px;
+  width: 80px;
+  background-color: rgb(0, 0, 0);
+}
+i::after{
+      margin-left: 0.5rem;
+}
+i::before {
+      margin-right: 0.5rem;
+}
+
+.form-control {
+  transition: all 0.3s;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #1abc9c !important;
+}
+input{
+      padding-left: 1.5rem;
+}
+button{
+  background-color: green;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white !important;
+}
+.btn:hover {
+  background-color: darkgreen;
+  color: white !important;
+}
+
+
+label {
+  transition: all 0.3s ease;
+  transform: translateY(25px);
+  pointer-events: none;
+  opacity: 0;
+  top: -10px;
+  left: 20px;
+}
+
+label.active {
+  transform: translateY(0);
+  font-size: 1rem !important;
+  color: green !important;
+  opacity: 1;
+}
+
+
+

@@ -1,0 +1,51 @@
+<section class="pt-3 pb-5">
+  <div class="container">
+    <div>
+      <h1 class="text-center text-uppercase fs-1 fw-bolder p-2">portfolio component</h1>
+      <div class="d-flex align-items-center justify-content-center mb-4">
+        <span class="line me-3"></span>
+        <i class="fa-solid fa-star fs-5"></i>
+        <span class="line ms-3"></span>
+      </div>
+    </div>
+
+    <div class="row g-5">
+      @for (img of images; track img) {
+        <div class="col-md-6 col-lg-4 ">
+          <div
+            class="position-relative overflow-hidden rounded portfolio-item"
+            role="button"
+            (click)="openModal(img)"
+          >
+            <img [src]="img" alt="Portfolio" class="img-fluid rounded" />
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center portfolio-item-overlay">
+              <i class="text-white fa-solid fa-plus fa-6x"></i>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- Modal -->
+  @if (selectedImage) {
+    <div
+      class="modal fade show d-block"
+      tabindex="-1"
+      (click)="closeModal()"
+      style="background-color: rgba(0, 0, 0, 0.8)"
+    >
+      <div class="modal-dialog modal-dialog-centered" (click)="$event.stopPropagation()">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-body text-center">
+            <img [src]="selectedImage" alt="Selected portfolio image" class="img-fluid rounded shadow-lg" />
+          </div>
+          <div class="text-end pe-3 pb-3">
+            <button class="btn btn-danger btn-md" (click)="closeModal()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+</section>

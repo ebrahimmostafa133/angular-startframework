@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark position-sticky top-0 custom-navbar py-4"[class.shrink]="isScrolled">
+  <div class="container d-flex justify-content-between">
+    <a class="navbar-brand" routerLink="/"><h2 class="text-white text-uppercase fw-bolder fs-2">{{ title }}</h2></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link fw-bold text-white" routerLinkActive="active" routerLink="/about">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-bold text-white" routerLinkActive="active" routerLink="/portfolio">PORTFOLIO</a>
+        </li>
+        <li class="nav-item">
+           <a class="nav-link fw-bold text-white" routerLinkActive="active" routerLink="/contact">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+

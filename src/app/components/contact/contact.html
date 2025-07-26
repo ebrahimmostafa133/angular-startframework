@@ -1,0 +1,83 @@
+<section class="pt-3 pb-5">
+  <div class="container pb-5">
+    <h1 class="text-center text-uppercase fs-1 fw-bolder p-2">
+      contact section
+    </h1>
+    <div class="d-flex align-items-center justify-content-center mb-4">
+      <span class="line me-3"></span>
+      <i class="fa-solid fa-star fs-5"></i>
+      <span class="line ms-3"></span>
+    </div>
+
+    <form
+      class="row justify-content-center pt-5 pb-4"
+      (submit)="onSubmit($event)"
+    >
+      <div class="col-md-8 col-lg-7">
+        <div class="mb-2">
+          <label for="userName" class="fs-5" [class.active]="formData.userName"
+            >User Name</label
+          >
+          <input
+            id="userName"
+            type="text"
+            [(ngModel)]="formData.userName"
+            name="userName"
+            placeholder="userName"
+            class="form-control border-0 border-bottom py-3 fs-6"
+          />
+        </div>
+
+        <div class="mb-2">
+          <label for="userAge" class="fs-5" [class.active]="formData.userAge"
+            >Age</label
+          >
+          <input
+            id="userAge"
+            type="text"
+            [(ngModel)]="formData.userAge"
+            name="userAge"
+            placeholder="userAge"
+            class="form-control border-0 border-bottom py-3 fs-6"
+          />
+        </div>
+
+        <div class="mb-2">
+          <label
+            for="userEmail"
+            class="fs-5"
+            [class.active]="formData.userEmail"
+            >Email</label
+          >
+          <input
+            id="userEmail"
+            type="email"
+            [(ngModel)]="formData.userEmail"
+            name="userEmail"
+            placeholder="userEmail"
+            class="form-control border-0 border-bottom py-3 fs-6"
+          />
+        </div>
+
+        <div class="mb-2">
+          <label
+            for="userPassword"
+            class="fs-5"
+            [class.active]="formData.userPassword"
+            >Password</label
+          >
+          <input
+            id="userPassword"
+            type="password"
+            [(ngModel)]="formData.userPassword"
+            name="userPassword"
+            placeholder="userPassword"
+            class="form-control border-0 border-bottom py-3 fs-6"
+          />
+        </div>
+
+        <button type="submit" class="btn py-2">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>

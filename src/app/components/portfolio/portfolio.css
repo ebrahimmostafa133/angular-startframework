@@ -1,0 +1,36 @@
+.line {
+  height: 4px;
+  width: 80px;
+  background-color: rgb(0, 0, 0);
+}
+i::after{
+      margin-left: 0.5rem;
+}
+i::before {
+      margin-right: 0.5rem;
+}
+.portfolio-item{
+      cursor: pointer;
+}
+.portfolio-item-overlay{
+      background-color: rgba(71, 210, 180, 0.9);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+
+}
+.portfolio-item:hover .portfolio-item-overlay {
+      opacity: 1;
+}
+.modal.fade.show.d-block {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

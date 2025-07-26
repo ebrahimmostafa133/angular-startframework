@@ -1,0 +1,18 @@
+.bg-home {
+  background-color: #1abc9c;
+  height: 83vh;
+}
+.home-image {
+  width: 250px;
+}
+i::after{
+      margin-left: 0.5rem;
+}
+i::before {
+      margin-right: 0.5rem;
+}
+.line {
+  height: 4px;
+  width: 80px;
+  background-color: white;
+}
